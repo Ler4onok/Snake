@@ -64,14 +64,7 @@ public class GameSnake {
             public void keyPressed (KeyEvent e) { // kontrol nazhatija klavish
                 snake.setDirection(e.getKeyCode());
 //                System.out.println(e.getKeyCode()); // code of the tab
-
-//                    System.out.print("Do you want to start a new game?");
-//                    if (e.getKeyCode() == 10) {
-//                        System.out.print("Let's start!");
-//                    }
-                    }
-
-
+                
 
         });
 
@@ -105,21 +98,11 @@ public class GameSnake {
                     if (e.getKeyCode() == 27){
                         System.exit(0);
                         //System.out.print("Let's start a new game!");
-
-
                     }
-
-
                 }
-
-
             });
         }
-
-
     }
-
-
 
 
     class Snake {
@@ -204,7 +187,7 @@ public class GameSnake {
 
 
         void paint(Graphics g){ //creating an object , g is a variable
-            for (Point point: snake){ //beret objekt i perebirajet poelementno i posylajet elementy v point
+            for (Point point: snake){ 
                 point.paint(g);
             }
         }
@@ -240,7 +223,7 @@ public class GameSnake {
     class Food extends Point{ // point is a parent-class
 
         public Food() { // heritates the variables of Point
-            super (-1, -1); // we cant see food
+            super (-1, -1); 
             this.color = FOOD_COLOR;
         }
         void eat(){
@@ -248,7 +231,7 @@ public class GameSnake {
         }
 
         boolean isEaten(){
-            return this.getX() == -1; // ? when the coordinates are negative it means that the food is eaten
+            return this.getX() == -1; 
         }
 
         void next(){
